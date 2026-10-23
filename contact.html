@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="お仕事のご依頼やお問い合わせのフォームです。">
+  <meta name="theme-color" content="#0e1d17">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="images/common/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="かめの宴">
+  <meta property="og:title" content="Contact | かめの宴">
+  <meta property="og:description" content="お仕事のご依頼やお問い合わせのフォームです。">
+  <!-- 公開後：<meta property="og:image" content="https://（ドメイン）/images/common/ogp.png"> と og:url を追加するとSNSで見栄えがよくなります -->
+  <title>Contact | かめの宴</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <noscript><p class="noscript-msg">このサイトの表示には JavaScript が必要です。ブラウザの設定で JavaScript を有効にしてください。</p></noscript>
+    <section class="block page-top" aria-labelledby="h-contact">
+      <h1 class="page-title" id="h-contact">Contact</h1>
+      <div class="gallery-desc" id="contact-desc"></div>
+      <div class="status-box" id="contact-notice"></div>
+
+      <form class="contact-form" id="contact-form">
+        <div class="form-field">
+          <label class="form-label" for="f-name">お名前<span class="req">必須</span></label>
+          <input class="form-input" id="f-name" name="お名前" type="text" autocomplete="name" required>
+          <p class="form-hint">ハンドルネームでも構いません。</p>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="f-email">返信用のメールアドレス<span class="req">必須</span></label>
+          <input class="form-input" id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="f-category">お問い合わせの種類<span class="req">必須</span></label>
+          <select class="form-input" id="f-category" name="お問い合わせの種類" required></select>
+          <p class="form-hint work-state" id="work-state" hidden></p>
+        </div>
+
+        <fieldset class="form-field work-fields" id="work-fields" hidden>
+          <legend class="form-label">お仕事のご依頼について</legend>
+          <div class="form-field">
+            <span class="form-label" id="use-label">ご利用の用途</span>
+            <div class="radio-row" role="group" aria-labelledby="use-label">
+              <label><input type="radio" name="用途" value="個人利用"> 個人利用</label>
+              <label><input type="radio" name="用途" value="商用利用"> 商用利用</label>
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="f-deadline">ご希望の納期</label>
+            <input class="form-input" id="f-deadline" name="希望納期" type="text" placeholder="例：2026年12月末まで">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="f-budget">ご予算</label>
+            <input class="form-input" id="f-budget" name="ご予算" type="text" placeholder="例：3万円ほど">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="f-ref">参考資料のURL</label>
+            <input class="form-input" id="f-ref" name="参考資料URL" type="url" placeholder="https://">
+          </div>
+        </fieldset>
+
+        <div class="form-field">
+          <label class="form-label" for="f-message"><span id="msg-label">お問い合わせ内容</span><span class="req">必須</span></label>
+          <textarea class="form-input" id="f-message" name="内容" rows="9" required></textarea>
+        </div>
+
+        <!-- スパム対策（人間には見えない欄。入力されたら送信を無視します） -->
+        <div class="hp" aria-hidden="true">
+          <label>この欄は空のままにしてください<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <details class="privacy">
+          <summary>プライバシーの取り扱い</summary>
+          <div id="privacy-text"></div>
+        </details>
+
+        <div class="form-field">
+          <label class="check"><input type="checkbox" id="f-consent" required> 注意事項とプライバシーの取り扱いに同意します<span class="req">必須</span></label>
+        </div>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        <button class="submit-btn" id="submit-btn" type="submit">送信する</button>
+      </form>
+
+      <div class="form-done" id="form-done" tabindex="-1" hidden>
+        <h3>送信しました</h3>
+        <p>お問い合わせありがとうございます。内容を確認し、ご入力のメールアドレスへご連絡します。</p>
+        <p><button class="submit-btn ghost" id="again-btn" type="button">続けて別の内容を送る</button></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="lastest/WORKS.js"></script>
+  <script src="lastest/CONTACT.js"></script>
+  <script src="lastest/SITE.js"></script>
+  <script src="page/common.js"></script>
+  <script src="page/contact-page.js"></script>
+</body>
+</html>

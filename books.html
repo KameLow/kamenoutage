@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="既刊（同人誌）の一覧です。サイズ・価格・通販リンクなどを掲載しています。">
+  <meta name="theme-color" content="#0e1d17">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="images/common/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="かめの宴">
+  <meta property="og:title" content="Books | かめの宴">
+  <meta property="og:description" content="既刊（同人誌）の一覧です。サイズ・価格・通販リンクなどを掲載しています。">
+  <!-- 公開後：<meta property="og:image" content="https://（ドメイン）/images/common/ogp.png"> と og:url を追加するとSNSで見栄えがよくなります -->
+  <title>Books | かめの宴</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <noscript><p class="noscript-msg">このサイトの表示には JavaScript が必要です。ブラウザの設定で JavaScript を有効にしてください。</p></noscript>
+    <section class="block page-top" aria-labelledby="h-books">
+      <h1 class="page-title" id="h-books">Books</h1>
+      <div class="gallery-desc" id="books-desc"></div>
+
+      <div class="info-tools">
+        <label class="visually-hidden" for="q">キーワードで検索</label>
+        <input id="q" type="search" placeholder="タイトル・説明文などで検索" autocomplete="off">
+      </div>
+      <p class="info-count" id="result" aria-live="polite"></p>
+
+      <nav class="pager" id="pager-top" aria-label="ページ切り替え（上）"></nav>
+      <ul class="book-list" id="book-list"></ul>
+      <nav class="pager" id="pager-bottom" aria-label="ページ切り替え（下）"></nav>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="lastest/BOOKS.js"></script>
+  <script src="lastest/SITE.js"></script>
+  <script src="page/common.js"></script>
+  <script src="page/pager.js"></script>
+  <script src="page/parts.js"></script>
+  <script src="page/books-page.js"></script>
+</body>
+</html>
