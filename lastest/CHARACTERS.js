@@ -75,7 +75,7 @@ const CHARACTERS = {
       ],
       text: "キャラクターの紹介文を書きます。",
       tag: "メスガメ",
-      links: [{ label: "設定資料（pixiv）", url: "https://www.pixiv.net/" }]
+      links: []
     },
     {
       id: "3",
@@ -129,7 +129,7 @@ const CHARACTERS = {
       ],
       text: "かつてトップアイドルとして活躍していたが、\n現在はソロ活動で低迷気味…。",
       tag: "秋吉真奈",
-      links: [{ label: "設定資料（pixiv）", url: "https://www.pixiv.net/" }]
+      links: []
     },
     {
       id: "6",
