@@ -178,6 +178,199 @@ const EVENTS = {
         { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20250201_kowane4.jpg" }
       ],
       newBooks: ["宙は星で満たされて"]
+    },
+    {
+      name: "コトノハーズフェスタ8",
+      date: "2024-11-10",
+      place: "大田区産業プラザPIO",
+      space: "D-03",
+      circleCut: "images/events/20241110_kotofes8.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20241110_kotofes8.jpg" }
+      ],
+      newBooks: ["イタあか短編集5"]
+    },
+    {
+      name: "ふたばすてっぷ",
+      date: "2024-06-02",
+      place: "川崎市産業振興会館",
+      space: "C-10",
+      circleCut: "images/events/20240602_futabastep.jpg",
+      links: [
+        { label: "イベント公式", url: "https://futabastep.net/fts1/" },
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20240602_futabastep.jpg" }
+      ],
+      newBooks: ["進○ゼミつのふた講座！"]
+    },
+    {
+      name: "声音の宴3次会",
+      date: "2024-05-03",
+      place: "大田区産業プラザPiO",
+      space: "A-30",
+      circleCut: "images/events/20240503_kowane3.jpg",
+      links: [
+        { label: "イベント公式", url: "https://kowa-uta.com/3rd/" },
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20240503_kowane3.jpg" }
+      ],
+      newBooks: ["あなたの姉になれたなら"]
+    },
+    {
+      name: "よかろいど福岡",
+      date: "2024-03-16",
+      place: "福岡県中小企業振興センター",
+      space: "C15",
+      circleCut: "images/events/20240316_yokaroid.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20240316_yokaroid.jpg" }
+      ],
+      newBooks: ["SmileMAKERS!2"]
+    },
+    {
+      name: "九州コミティア8",
+      date: "2024-03-10",
+      place: "西日本総合展示場 新館",
+      space: "B-24",
+      circleCut: "images/events/20240310_QCOMITIA8.jpg",
+      links: [
+        { label: "イベント公式", url: "https://www.q-comitia.com/event/8_2024/" },
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20240310_QCOMITIA8.jpg" }
+      ],
+      newBooks: ["亀の恩返し"]
+    },
+    {
+      name: "ボイスコネクト3",
+      date: "2023-09-30",
+      place: "大田区産業プラザPiO",
+      space: "G-25",
+      circleCut: "images/events/20230930_voiceconnect3.jpg",
+      links: [
+        { label: "イベント公式", url: "http://voiceconnect.fun/#/" },
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20230930_voiceconnect3.jpg" }
+      ],
+      newBooks: ["いつかのなつのふたり"]
+    },
+    {
+      name: "声音の宴2次会",
+      date: "2023-07-09",
+      place: "ポートメッセなごや",
+      space: "B-6",
+      circleCut: "images/events/20230709_kowane2.jpg",
+      links: [
+        { label: "イベント公式", url: "https://kowa-uta.com/2nd/" },
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20230709_kowane2.jpg" }
+      ],
+      newBooks: ["イタあか短編集4"]
+    },
+    {
+      name: "コトノハーズフェスタ7",
+      date: "2023-05-05",
+      place: "東京都立産業貿易センター台東館",
+      space: "C-12",
+      circleCut: "images/events/20230505_kotofes7.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20230505_kotofes7.jpg" }
+      ],
+      newBooks: ["桜が二人を分つまで"]
+    },
+    {
+      name: "声音の宴",
+      date: "2022-11-20",
+      place: "けいはんなオープンイノベーションセンター",
+      space: "B-3",
+      circleCut: "images/events/20221120_kowane.jpg",
+      links: [
+        { label: "イベント公式", url: "https://kowa-uta.com/1st/" },
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20221120_kowane.jpg" }
+      ],
+      newBooks: ["SmileMAKERS!"]
+    },
+    {
+      name: "Each of Voice.2022",
+      date: "2022-09-04",
+      place: "横浜産貿ホールマリネリア",
+      space: "E-25",
+      circleCut: "images/events/20220904_EofV2022.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20220904_EofV2022.jpg" }
+      ],
+      newBooks: ["君色のようなアオイ空2"]
+    },
+    {
+      name: "ボイスコネクト2",
+      date: "2022-03-27",
+      place: "大田区産業プラザPiO",
+      space: "J-09",
+      circleCut: "images/events/20220327_voiceconnect2.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20220327_voiceconnect2.jpg" }
+      ],
+      newBooks: ["イタあか短編集3"]
+    },
+    {
+      name: "コトノハくらぶ",
+      date: "2021-04-11",
+      place: "御堂会館",
+      space: "コト-15",
+      circleCut: "images/events/20210411_kotonohaclub.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20210411_kotonohaclub.jpg" }
+      ],
+      newBooks: ["コトノハ健全本"]
+    },
+    {
+      name: "ボイスロイドマーチ5",
+      date: "2021-03-27",
+      place: "ポートメッセなごや",
+      space: "H-29",
+      circleCut: "images/events/20210327_voiceroidmarch5.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20210327_voiceroidmarch5.jpg" }
+      ],
+      newBooks: ["イタあか(一人)合同"]
+    },
+    {
+      name: "ボイスコネクト",
+      date: "2020-08-01",
+      place: "東京流通センター",
+      space: "H-09",
+      circleCut: "images/events/20200801_voiceconnect.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20200801_voiceconnect.jpg" }
+      ],
+      newBooks: ["イタあか短編集2 / イタあか短編集2.18"]
+    },
+    {
+      name: "この声届け、月までも六",
+      date: "2020-02-11",
+      place: "大田区産業プラザPiO",
+      space: "Q-08",
+      circleCut: "images/events/20200211_koetsuki6.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20200211_koetsuki6.jpg" }
+      ],
+      newBooks: ["君色のようなアオイ空"]
+    },
+    {
+      name: "うさぎの宴 2次会",
+      date: "2019-10-20",
+      place: "多治見市産業文化センター",
+      space: "月-09",
+      circleCut: "images/events/20191020_usauta2.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20191020_usauta2.jpg" }
+      ],
+      newBooks: ["ロリゆかりんとあかりお姉ちゃん"]
+    },
+    {
+      name: "コトノハーズフェスタ3(Each of Voice.)",
+      date: "2019-10-05",
+      place: "横浜産貿ホールマリネリア",
+      space: "B-7",
+      circleCut: "images/events/20191005_kotofes3.jpg",
+      links: [
+        { label: "お品書き", url: "https://kamelow.com/events/oshinagaki/20191005_kotofes3.jpg" }
+      ],
+      newBooks: ["イタあか短編集"]
     }
   ]
 };
