@@ -176,7 +176,15 @@ a:hover>.ext-mark{border-color:var(--accent);color:var(--accent)}
 .shop-link,.pill-link{padding:.1rem .9rem;border:1px solid var(--accent);border-radius:999px;color:var(--accent);text-decoration:none;font-size:.9rem}
 .shop-link:hover,.pill-link:hover{background:var(--accent);color:var(--bg)}
 .profile-links{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0 0!important}
-.tweets{max-width:560px}
+.tweets{max-width:640px}
+.tweet-cards{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.tweet-card{display:block;padding:1rem 1.2rem;color:var(--text);text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+a.tweet-card:hover{border-color:var(--accent)}
+.tweet-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .8rem;margin:0 0 .5rem;color:var(--muted);font-size:.85rem}
+.tweet-account{color:var(--accent);font-weight:700}
+.tweet-text{margin:0;white-space:pre-line;overflow-wrap:anywhere}
+.tweet-img{display:block;max-width:100%;max-height:320px;margin-top:.8rem;border:1px solid var(--line);border-radius:8px}
+.tweet-card .ext-mark{display:inline-block;margin:.8rem 0 0}
 .tweets-note{margin:.8rem 0 0;color:var(--muted);font-size:.9rem}
 .tweets-more{margin:.8rem 0 0}
 .tweets-more a{color:var(--accent);text-decoration:none}

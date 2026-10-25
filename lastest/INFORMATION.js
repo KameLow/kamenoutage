@@ -40,7 +40,7 @@ const INFORMATION = [
     title: "九州コミティア11に申し込みました！",
     body: [
       "2027年3月28日に北九州メッセで開催される[九州コミティア11](https://www.q-comitia.com/event/11_2027/)に申し込みました！",
-      { img: "images/events/20270328_九州コミティア11.png", caption: "サークルカット" },
+      { img: "images/events/20270328_QCOMITIA11.jpg", caption: "サークルカット" },
       "新刊はアイドル×百合本を予定しています。",
       "よろしくお願いします！"
     ]

@@ -16,7 +16,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <script>document.write('<link rel="stylesheet" href="style.css?v='+Date.now()+'">')</script>
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -37,11 +38,6 @@
 
   <footer class="site-footer" id="site-footer"></footer>
 
-  <script src="lastest/GALLERY.js"></script>
-  <script src="lastest/CHARACTERS.js"></script>
-  <script src="lastest/SITE.js"></script>
-  <script src="page/common.js"></script>
-  <script src="page/parts.js"></script>
-  <script src="page/characters-page.js"></script>
+  <script src="page/boot.js?v=1" data-load="lastest/GALLERY.js lastest/CHARACTERS.js lastest/SITE.js page/common.js page/parts.js page/characters-page.js"></script>
 </body>
 </html>

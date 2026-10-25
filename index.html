@@ -16,14 +16,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <script>document.write('<link rel="stylesheet" href="style.css?v='+Date.now()+'">')</script>
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header" id="site-header"></header>
 
   <main id="main">
-    <h1 class="visually-hidden">かめの宴</h1>
+    <h1 class="visually-hidden">かめの宴 公式サイト</h1>
     <noscript><p class="noscript-msg">このサイトの表示には JavaScript が必要です。ブラウザの設定で JavaScript を有効にしてください。</p></noscript>
     <section class="block page-top" aria-labelledby="h-about">
       <h2 id="h-about">このサイトについて</h2>
@@ -56,15 +57,6 @@
 
   <footer class="site-footer" id="site-footer"></footer>
 
-  <script src="lastest/INFORMATION.js"></script>
-  <script src="lastest/GALLERY.js"></script>
-  <script src="lastest/BOOKS.js"></script>
-  <script src="lastest/WORKS.js"></script>
-  <script src="lastest/EVENTS.js"></script>
-  <script src="lastest/LASTEST.js"></script>
-  <script src="lastest/SITE.js"></script>
-  <script src="page/common.js"></script>
-  <script src="page/parts.js"></script>
-  <script src="page/main.js"></script>
+  <script src="page/boot.js?v=1" data-load="lastest/INFORMATION.js lastest/GALLERY.js lastest/BOOKS.js lastest/WORKS.js lastest/EVENTS.js lastest/LASTEST.js lastest/SITE.js page/common.js page/parts.js page/main.js"></script>
 </body>
 </html>

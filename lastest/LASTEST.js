@@ -31,15 +31,26 @@ const LATEST = {
     ]
   },
 
-  /* ⑤ 最近のつぶやき（Xの埋め込み）
-     ・account : Xのユーザー名（@なし）。最新のポストを自動で表示します
-     ・limit   : 表示するポスト数（1〜20。account でも posts でも効きます）
-     ・posts   : 特定のポストのURLを並べると、そのポストだけを表示します（account より優先）
-                 例）posts: ["https://x.com/ユーザー名/status/1234567890123456789"]
-     account も posts も空にすると、この項目は非表示になります */
+  /* ⑤ 最近のつぶやき（Xのポストを載せます）
+     表示方法は3つあります。上にあるものが優先されます。
+     1. cards … 自分で書いた文章を、サイトのデザインで表示します（おすすめ）
+        ※ Xの埋め込みは、X側の制限で表示されないことがあるため、確実に表示したいときはこれを使います
+        例）cards: [ { date: "2026-10-20", text: "ポストの文章", url: "https://x.com/ユーザー名/status/…", image: "" } ]
+        ・date は日付、url はそのポストのURL（書くと、カードをクリックでXへ移動します）
+        ・image は画像のパス（なくてOK。images/lastest フォルダに置きます）
+        ・新しい日付が上に表示されます
+     2. posts … 特定のポストを、Xの埋め込みで表示します
+        例）posts: ["https://x.com/ユーザー名/status/1234567890123456789"]
+     3. account だけ … Xのタイムライン（最新のポスト）の埋め込みです。X側の制限で、表示されないことがあります
+     ・account は、Xのユーザー名（@なし）。「Xでもっと見る」のリンクにも使います
+     ・limit は表示する件数（1〜20）
+     cards・posts・account のすべてが空だと、この項目は非表示になります */
   twitter: {
-    account: "kame_low",       // 例："your_account"
+    account: "Kame_Low",       // 例："your_account"
     limit: 3,
+    cards: [
+      // { date: "2026-10-20", text: "ここにポストの文章を書きます。", url: "https://x.com/", image: "" }
+    ],
     posts: []
   }
 };

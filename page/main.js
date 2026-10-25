@@ -75,19 +75,35 @@
       }).join("")}</div>`
     : `<p class="empty-msg">現在、参加予定のイベントはありません。</p>`;
 
-  /* ⑤ 最近のつぶやき（Xの埋め込み）
-     posts にポストのURLがあればそのポストを、なければ account の最新ポスト（タイムライン）を表示 */
+  /* ⑤ 最近のつぶやき（3つの表示方法。上にあるものが優先されます）
+     1. cards … 自分で書いた文章を、サイトのデザインで表示（Xの表示制限の影響を受けないので確実です）
+     2. posts … 特定のポストを、Xの埋め込みで表示
+     3. account のみ … Xのタイムライン埋め込み（Xの側の制限で、表示されないことがあります） */
   const tw = LATEST.twitter || {};
   const limit = Math.min(20, Math.max(1, parseInt(tw.limit, 10) || 3));   /* 表示するポスト数（1〜20） */
-  const posts = (tw.posts || []).filter(Boolean).slice(0, limit);
   const user = tw.account ? encodeURIComponent(tw.account) : "";
-  if (user || posts.length) {
+  const cards = (tw.cards || []).filter((c) => c && (c.text || c.url))
+    .sort(byDateDesc).slice(0, limit);
+  const posts = (tw.posts || []).filter(Boolean).slice(0, limit);
+  const moreLink = user
+    ? `<p class="tweets-more"><a href="https://x.com/${user}" target="_blank" rel="noopener noreferrer">Xでもっと見る &rarr;</a></p>` : "";
+
+  if (cards.length) {
+    $("tweets").innerHTML =
+      `<ul class="tweet-cards">${cards.map((c) => {
+        const inner = `<p class="tweet-meta">${tw.account ? `<span class="tweet-account">@${esc(tw.account)}</span>` : ""}${c.date ? `<time datetime="${esc(c.date)}">${esc(Parts.looseDate(c.date))}</time>` : ""}</p>
+           ${c.text ? `<p class="tweet-text">${esc(c.text)}</p>` : ""}
+           ${c.image ? `<img class="tweet-img" src="${esc(c.image)}" alt="" loading="lazy" decoding="async">` : ""}`;
+        return c.url
+          ? `<li><a class="tweet-card" href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${inner}<span class="ext-mark">Xで見る &nearr;</span></a></li>`
+          : `<li><div class="tweet-card">${inner}</div></li>`;
+      }).join("")}</ul>` + moreLink;
+  } else if (user || posts.length) {
     const body = posts.length
       ? posts.map((u) =>
           `<blockquote class="twitter-tweet" data-theme="dark" data-lang="ja" data-dnt="true"><a href="${esc(String(u).replace("://x.com/", "://twitter.com/"))}">ポストを見る</a></blockquote>`).join("")
       : `<a class="twitter-timeline" data-theme="dark" data-lang="ja" data-chrome="nofooter" data-tweet-limit="${limit}" href="https://x.com/${user}">@${esc(tw.account)} のポストを読み込み中…</a>`;
-    $("tweets").innerHTML = body +
-      (user ? `<p class="tweets-more"><a href="https://x.com/${user}" target="_blank" rel="noopener noreferrer">Xでもっと見る &rarr;</a></p>` : "");
+    $("tweets").innerHTML = body + moreLink;
 
     const s = document.createElement("script");
     s.async = true;
