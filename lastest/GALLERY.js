@@ -39,6 +39,7 @@ const GALLERY = {
   ],
 
   items: [
+  { no: 1167, date: "2026-10-25", url: "https://kamelow.com/gallery/20261025_1167.jpg", tags: ["ヒモノ"], thumb: "images/gallery/20261025_1167.jpg" },
   { no: 1166, date: "2026-10-14", url: "https://kamelow.com/gallery/20261014_1166.jpg", tags: ["くぇ"], thumb: "images/gallery/20261014_1166.jpg" },
   { no: 1165, date: "2026-10-09", url: "https://kamelow.com/gallery/20261009_1165.jpg", tags: ["秋吉真奈"], thumb: "images/gallery/20261009_1165.jpg" },
   { no: 1164, date: "2026-10-04", url: "https://kamelow.com/gallery/20261004_1164.jpg", tags: ["秋吉真奈"], thumb: "images/gallery/20261004_1164.jpg" },
