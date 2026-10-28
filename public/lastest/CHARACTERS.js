@@ -148,6 +148,24 @@ const CHARACTERS = {
       text: "とある真夏のライブ会場で干からびていたところを真奈に助けられたトカゲ。\nアルビノのニホントカゲという珍しい個体だったりする。",
       tag: "ヒモノ",
       links: []
+    },
+    {
+      id: "7",
+      name: "椿木 麗",
+      reading: "Rei TSUBAKI",
+      catch: "「いい方法があるんだけど…どうかしら？」",
+      color: "#6d2caa",
+      image: "images/characters/rei_stand.png",
+      icon: "images/characters/rei_icon.png",
+      profile: [
+        ["年齢", "26歳"],
+        ["誕生日", "6月30日"],
+        ["身長", "172cm"],
+        ["好きなもの", "アイドルを輝かせること、クルマ"]
+      ],
+      text: "真奈のマネージャー兼プロデューサー兼その他諸々。\n抜群の手腕で様々なアイドルを成功させてきた。",
+      tag: "椿木麗",
+      links: []
     }
   ]
 };
