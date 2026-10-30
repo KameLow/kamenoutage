@@ -11,13 +11,13 @@
   <meta property="og:site_name" content="かめの宴">
   <meta property="og:title" content="Events | かめの宴">
   <meta property="og:description" content="参加予定・参加済みのイベントの一覧です。">
-  <meta property="og:image" content="https://kamelow.com/common/OGP.png">
+  <meta property="og:image" content="https://example.com/images/common/ogp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="600">
   <meta property="og:image:alt" content="かめの宴 公式サイト">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://kamelow.com/common/OGP_square.png">
+  <meta name="twitter:image" content="https://example.com/images/common/ogp-square.png">
   <meta name="twitter:image:alt" content="かめの宴 公式サイト">
   <!-- ↑ https://example.com は、実際のサイトのアドレス（例：https://自分のドメイン）に書き換えてください（全ページ同じです）。
        SNSの画像は、絶対アドレス（https:// から始まる形）でないと表示されません。
@@ -63,12 +63,14 @@
         </select>
       </div>
       <p class="info-count" id="result" aria-live="polite"></p>
+      <nav class="pager" id="pager-top" aria-label="ページ切り替え（上）"></nav>
       <div id="event-list"></div>
+      <nav class="pager" id="pager-bottom" aria-label="ページ切り替え（下）"></nav>
     </section>
   </main>
 
   <footer class="site-footer" id="site-footer"></footer>
 
-  <script src="page/boot.js?v=1" data-load="lastest/EVENTS.js lastest/SITE.js page/common.js page/parts.js page/events-page.js"></script>
+  <script src="page/boot.js?v=1" data-load="lastest/EVENTS.js lastest/SITE.js page/common.js page/parts.js page/pager.js page/events-page.js"></script>
 </body>
 </html>
