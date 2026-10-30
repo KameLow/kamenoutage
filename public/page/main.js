@@ -66,7 +66,7 @@
            <div>
              <h3 class="event-name">${esc(e.name)}</h3>
              <ul class="event-info">
-               <li>${esc(dateText(e))}</li>
+               <li>${esc(dateText(e))}${Parts.countdown(e)}</li>
                ${e.place ? `<li>${esc(e.place)}</li>` : ""}
                ${e.space ? `<li>${esc(e.space)}</li>` : ""}
              </ul>

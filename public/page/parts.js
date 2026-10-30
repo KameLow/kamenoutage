@@ -151,6 +151,18 @@ const Parts = (function () {
     const sameYear = e.date.slice(0, 4) === e.dateEnd.slice(0, 4);
     return `${fmt1(e.date, true)}〜${fmt1(e.dateEnd, !sameYear)}`;
   };
+  /* 開催日までの日数（今日が開催日なら0、開催中ならマイナス）。日付だけで数えます */
+  const daysUntil = (s) => {
+    const [y, m, d] = s.split("-").map(Number);
+    const [ty, tm, td] = today.split("-").map(Number);
+    return Math.round((Date.UTC(y, m - 1, d) - Date.UTC(ty, tm - 1, td)) / 86400000);
+  };
+  const countdown = (e) => {
+    if (!isUpcoming(e)) return "";
+    const n = daysUntil(e.date);
+    const text = n > 0 ? `あと${n}日` : (n === 0 ? "本日開催" : "開催中");
+    return `<span class="days-left">${text}</span>`;
+  };
   const eventRow = (e, feature) => {
     const cut = e.circleCut || "images/events/circlecut-placeholder.svg";
     const links = (e.links || []).map(pill).join("");
@@ -165,7 +177,7 @@ const Parts = (function () {
        <div class="event-body">
          <h3 class="event-title">${esc(e.name)}${isUpcoming(e) ? ' <span class="tag">参加予定</span>' : ""}</h3>
          <dl class="spec">
-           ${row("開催日", `<time datetime="${esc(e.date)}">${esc(eventDate(e))}</time>`)}
+           ${row("開催日", `<time datetime="${esc(e.date)}">${esc(eventDate(e))}</time>${countdown(e)}`)}
            ${row("会場", esc(e.place))}
            ${row("スペース", esc(e.space))}
            ${row("リンク", links ? `<span class="shop-links">${links}</span>` : "")}
@@ -178,5 +190,5 @@ const Parts = (function () {
   return { esc, pad, dot, isExt, attrs, pill, row, looseDate, price, tagHtml,
     siteOf, infoRow, linkify, infoBody, infoText,
     galleryThumb, galleryItem, galleryMini, bookRow, workRow,
-    endOf, isUpcoming, eventDate, eventRow };
+    endOf, isUpcoming, daysUntil, countdown, eventDate, eventRow };
 })();
