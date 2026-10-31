@@ -24,6 +24,14 @@ const INFORMATION_DESCRIPTION = [
 
 const INFORMATION = [
   {
+    id: "20261031_01",
+    date: "2026-10-31",
+    category: "FANBOX",
+    title: "10月が終わる…？",
+    url: "https://kamelow.fanbox.cc/posts/12850429",
+    site: "FANBOX"
+  },
+  {
     id: "20261023_01",
     date: "2026-10-23",
     category: "お知らせ",
@@ -50,7 +58,7 @@ const INFORMATION = [
     date: "2026-09-30",
     category: "FANBOX",
     title: "9月が終わる…？",
-    url: "https://www.fanbox.cc/@kamelow/posts/12685968",
+    url: "https://kamelow.fanbox.cc/posts/12685968",
     site: "FANBOX"
   }
 ];
