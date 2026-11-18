@@ -4,7 +4,8 @@ const Parts = (function () {
   "use strict";
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const pad = (n) => String(n).padStart(4, "0");
+  /* 番号の表示：12 → 0012、差分の 12.1 → 0012.1（小数点つきも使えます） */
+  const pad = (n) => { const [i, f] = String(n).split("."); return i.padStart(4, "0") + (f ? "." + f : ""); };
   const pad2 = (n) => String(n).padStart(2, "0");
   const dot = (d) => String(d ?? "").replace(/-/g, ".");
   const isExt = (u) => /^https?:\/\//.test(u || "");

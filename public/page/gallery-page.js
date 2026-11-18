@@ -10,7 +10,7 @@
 
   /* 説明文・進捗 */
   $("gallery-desc").innerHTML = GALLERY.description.map((t) => `<p>${esc(t)}</p>`).join("");
-  const done = items.length ? items[0].no : 0;   /* 現在の枚数 = 一番大きい no */
+  const done = items.length ? Math.floor(items[0].no) : 0;   /* 現在の枚数 = 一番大きい no（小数点の差分は切り捨て） */
   const goal = GALLERY.goal || done;
   $("progress").innerHTML =
     `<p class="progress-text"><strong>${done.toLocaleString()}</strong> / ${goal.toLocaleString()} 枚</p>
@@ -23,8 +23,12 @@
   q.value = state.q;
 
   const matches = (it, words) => words.every((w) => {
-    const m = w.match(/^(?:no\.?|#)?(\d+)$/);
-    if (m) return it.no === parseInt(m[1], 10);           /* 数字だけなら番号で完全一致 */
+    const m = w.match(/^(?:no\.?|#)?(\d+(?:\.\d+)?)$/);
+    if (m) {                                             /* 数字だけなら番号で検索 */
+      return m[1].includes(".")
+        ? it.no === parseFloat(m[1])                     /* 12.1 → その差分だけ */
+        : Math.floor(it.no) === parseInt(m[1], 10);      /* 12 → 12 と、その差分（12.1 など）*/
+    }
     return norm([it.title || "", ...(it.tags || [])].join(" ")).includes(w);
   });
 
