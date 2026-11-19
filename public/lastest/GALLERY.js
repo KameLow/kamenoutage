@@ -36,10 +36,11 @@ const GALLERY = {
   /* Galleryの説明文（1要素 = 1段落） */
   description: [
     "Xで実施している2310枚企画で描いたイラストをまとめています。",
-    "数が多いので過去分はぼちぼち更新していきます…。"
+    "キャラ名クリックで絞ることができます。"
   ],
 
   items: [
+    { no: 1173, date: "2026-11-19", url: "https://kamelow.com/gallery/20261119_1173.jpg", tags: ["上田香苗"], thumb: "images/gallery/2026/20261119_1173.jpg" },
     { no: 1172, date: "2026-11-17", url: "https://kamelow.com/gallery/20261117_1172.jpg", tags: ["秋吉真奈"], thumb: "images/gallery/2026/20261117_1172.jpg" },
     { no: 1171, date: "2026-11-08", url: "https://kamelow.com/gallery/20261108_1171.jpg", tags: ["上田香苗"], thumb: "images/gallery/2026/20261108_1171.jpg" },
     { no: 1170, date: "2026-11-03", url: "https://kamelow.com/gallery/20261103_1170.jpg", tags: ["ヒモノ"], thumb: "images/gallery/2026/20261103_1170.jpg" },
@@ -110,7 +111,7 @@ const GALLERY = {
     { no: 1105, date: "2026-02-14", url: "https://kamelow.com/gallery/20260214_1105.jpg", tags: ["くぇ"], thumb: "images/gallery/2026/20260214_1105.jpg" },
     { no: 1104, date: "2026-02-08", url: "https://kamelow.com/gallery/20260208_1104.jpg", tags: ["双葉湊音"], thumb: "images/gallery/2026/20260208_1104.jpg" },
     { no: 1103, date: "2026-02-02", url: "https://kamelow.com/gallery/20260202_1103.jpg", tags: ["双葉湊音"], thumb: "images/gallery/2026/20260202_1103.jpg" },
-    { no: 1102, date: "2026-02-02", url: "https://kamelow.com/gallery/20260202_1102.png", tags: ["メスガメ","くぇ","ヒモノ"], thumb: "images/gallery/2026/20260202_1102.jpg" },
+    { no: 1102, date: "2026-02-02", url: "https://kamelow.com/gallery/20260202_1102.png", tags: ["メスガメ"], thumb: "images/gallery/2026/20260202_1102.jpg" },
     { no: 1101, date: "2026-02-01", url: "https://kamelow.com/gallery/20260201_1101.jpg", tags: ["彩澄りりせ"], thumb: "images/gallery/2026/20260201_1101.jpg" },
     { no: 1100, date: "2026-01-27", url: "https://kamelow.com/gallery/20260127_1100.jpg", tags: ["メスガメ","くぇ","ヒモノ","記念"], thumb: "images/gallery/2026/20260127_1100.jpg" },
     { no: 1099, date: "2026-01-24", url: "https://kamelow.com/gallery/20260124_1099.jpg", tags: ["ヒモノ"], thumb: "images/gallery/2026/20260124_1099.jpg" },
