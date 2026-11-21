@@ -84,6 +84,10 @@ const CHARACTERS = {
       catch: "「香苗ちゃんのプライベートを覗けるこの瞬間が楽しいから」",
       color: "#ff7ddc",
       image: "images/characters/yuu_stand.png",
+      images: [
+        { src: "images/characters/yuu_stand.png", label: "立ち絵" },
+        { src: "images/characters/yuu_stand2.png", label: "YuU立ち絵" },
+      ],
       icon: "images/characters/yuu_icon.png",
       profile: [
         ["年齢", "15歳"],
